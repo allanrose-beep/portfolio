@@ -1,0 +1,459 @@
+/* General Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #ffefef;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2C3E50; /* deep rose */
+}
+
+p, li {
+  color: #444;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2C3E50;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-text p {
+  color: #ddd;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Section Base Styles */
+section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Remove global .wrapper flex styles - only keep max-width and centering */
+.wrapper {
+  max-width: 1200px;  
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section text and media flex */
+section .text {
+  flex: 1;
+}
+
+section .image, section .video {
+  flex: 1;
+  height: 200px;
+  background: transparent; /* removed gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Alternate Backgrounds */
+.context, .old-journey, .marketing, .outcome {
+  background-color: #ffefef;
+}
+
+.problem, .finance, .new-journey, .final {
+  background-color: #feeae9;
+}
+
+/* Column Swap for GIF-left/text-right and Image-left/text-right */
+.problem, .marketing, .final {
+  flex-direction: row-reverse;
+}
+
+/* Section 3 & 6 (Text above video) - scoped for old-journey & new-journey only */
+.old-journey, .new-journey {
+  flex-direction: column;
+  text-align: center;
+}
+
+.old-journey .video,
+.new-journey .video {
+  width: 100%;
+  max-width: 900px; /* increased video size */
+  height: auto;     /* Allow natural height */
+  margin: 1rem auto 0;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+.old-journey .video video,
+.new-journey .video video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+.old-journey .text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+}
+
+.old-journey .text p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Old-journey wrapper scoped flex for vertical stacking only */
+.old-journey .wrapper {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Context Section: Text Left, Image Right */
+.context .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.context .text {
+  flex: 1;
+}
+
+.context .image {
+  flex: 1;
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.context .image img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.context h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+}
+
+/* Finance Section */
+.finance {
+  flex-direction: row; /* text left, image right */
+}
+
+.finance .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.finance .image {
+  flex: 1;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.finance .image img {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.finance h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+}
+
+/* Outcome Section */
+.outcome .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.outcome .text {
+  flex: 1;
+}
+
+.outcome .image {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.outcome .image img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.outcome h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+}
+
+/* Problem Section */
+.problem .wrapper {
+  display: flex;
+  flex-direction: row; /* image left, text right */
+  align-items: center;
+  gap: 2rem;
+}
+
+.problem .image {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.problem .image img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.problem .text {
+  flex: 1;
+}
+
+.problem h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+}
+
+/* Marketing Section */
+.marketing .wrapper {
+  display: flex;
+  flex-direction: row; /* image left, text right */
+  align-items: center;
+  gap: 2rem;
+}
+
+.marketing .image {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.marketing .image img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.marketing .text {
+  flex: 1;
+}
+
+.marketing h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+}
+
+/* new journey */
+/* New-journey styles: same as old-journey */
+
+.new-journey {
+  flex-direction: column;
+  text-align: center;
+}
+
+.new-journey .wrapper {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  max-width: 900px;  
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.new-journey .text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+}
+
+.new-journey .video {
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem auto 0;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+  flex: 1 1 500px;
+}
+
+.new-journey .video video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;  /* change from cover to contain */
+  display: block;
+}
+
+
+/* Final Section */
+.final .wrapper {
+  display: flex;
+  flex-direction: row; /* image left, text right */
+  align-items: center;
+  gap: 2rem;
+}
+
+.final .image {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.final .image img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.final .text {
+  flex: 1;
+}
+
+.final h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+}
+.site-footer {
+  background-color: #2C3E50;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-footer .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .image, .video {
+    width: 100%;
+    height: 150px;
+  }
+  .hero-content {
+    flex-direction: column;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Scroll animation: Fade in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
