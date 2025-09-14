@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-links">
+      <a href="#" class="nav-btn active">Home</a>
+      <a href="Aboutpage/index.html" class="nav-btn">About</a>
+      <a href="#work" class="nav-btn">Work</a> 
+      <a href="#contact" class="nav-btn">Contact</a>
+    </div>
+  </div>
+</nav>
+<!-- ================= HERO ================= -->
+<section id="hero" section class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <p>Hello! My name is</p>
+      <h1>Allan Rose</h1>
+      <h3>Product Manager</h3>
+      <p>Growing up, I wanted to be Batman.<br>Unfortunately, but my parents didn’t give me a Batmobile budget, so here we are</p>
+      <!-- Update the anchor tag to link to your CV and use the 'download' attribute -->
+      <a href="asset/AllanresumeBA.pdf" class="cta-button" download><strong>Download CV</strong></a>
+    </div> 
+    <div class="hero-image">
+      <img src="Asset/hero.jpg" alt="hero-image" />
+    </div>
+  </div>
+</section>
+ <!-- ================= INVESTIGATION ================= -->
+<section class="investigation">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="investigation-text">
+      <h2>What I Do?</h2>
+    </div>
+
+    <!-- Image Section with Text Below -->
+    <div class="image-container">
+      <!-- Image 1 -->
+      <div class="image-item">
+        <img src="asset/visual.png" alt="Agent 1">
+        <p><strong>Visualize</strong><Br>Understanding problems and envisioning solutions.</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="image-item">
+        <img src="asset/build.png" alt="Agent 2">
+        <p><strong>Build</strong><Br>Turning vision into tangible product experiences or features</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="image-item">
+        <img src="asset/refine.png" alt="Agent 3">
+        <p><strong>Refine</strong><Br>Improving based on feedback, data, and learning</p>
+      </div>
+    </div>
+    <p>(And of course, Save Gotham at midnight)</p>
+  </div>
+</section>
+<!-- ================= Work ================= -->
+<section id="work" class="work-section">
+  <div class="container">
+    <h2 class="work-header">Featured Work</h2>
+    <p class="work-intro">Here’s a small selection of projects I’ve worked on.<br>Because, let’s face it, even superheroes need a portfolio.</p>
+    <div class="work-gallery">
+      <a href="enagolock/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/enagolock.jpg" alt="Project 1" />
+          <h3 class="work-title">Enago Lock: From Utility to Product</h3>
+          <p class="work-desc">I transformed a simple encryption tool into a full product that now protects thousands of client documents.</p>
+        </div>
+      </a>
+      <a href="clientprofiling/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/clientprofiling.jpg" alt="Project 2" />
+          <h3 class="work-title">Client Profiling: Client history at your fingertips</h3>
+          <p class="work-desc">A dip in transactions revealed a CS blind spot, I built a profiling dashboard for context, clarity, and action.</p>
+        </div>
+      </a>
+      <a href="crosssell/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/crosssell.jpg" alt="Project 3" />
+          <h3 class="work-title">Cross-Selling: Turning User Behavior Into a 12% Uptake</h3>
+          <p class="work-desc">Users loved one brand, then another. I added cross-sell on order pages, boosting service uptake by 12%.</p>
+        </div>
+      </a>
+      <a href="accountselection/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/accountselection.jpg" alt="Project 4" />
+          <h3 class="work-title">The $500K Feature: Simplifying Account Selection</h3>
+          <p class="work-desc">A simple account selection feature met a key client need and helped close a $500K deal.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div class="container">
+    <h2 class="work-header">Featured Projects</h2>
+    <p class="work-intro">I thrive on automation and creative problem-solving; <br>using smart workflows to boost efficiency and enhance user experience.<br>(And yes, I might have a cape stashed somewhere.).</p>
+    <div class="work-gallery">
+      <a href="offplatform/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/offplatform.png" alt="Project 1" />
+          <h3 class="work-title">Solving the Invisible: Tackling Off-Platform Transactions</h3>
+          <p class="work-desc">I spotted users paying outside the app; addressing this protected both experience and company revenue.</p>
+        </div>
+      </a>
+      <a href="ipldashboard/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/IPL.png" alt="Project 2" />
+          <h3 class="work-title">From Chaos to Clarity: Building a Dashboard During My BA Course</h3>
+          <p class="work-desc">During my UpGrad BA course, I turned complex data into a clear, useful dashboard.</p>
+        </div>
+      </a>
+      <a href="News/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/news.png" alt="Project 3" />
+          <h3 class="work-title">Staying Sharp, the Lazy Way: Automated Market Insights</h3>
+          <p class="work-desc">I built an N8N-Gmail workflow that scrapes news and sends weekly updates to keep me informed effortlessly.</p>
+        </div>
+      </a>
+      <a href="Pet feature/index.html" target="_blank" class="work-item-link">
+        <div class="work-item">
+          <img src="asset/N8N.png" alt="Project 4" />
+          <h3 class="work-title">Teaching With Automation: An N8N Feature for Pet Lovers</h3>
+          <p class="work-desc">Created an N8N workflow that educates pet parents, making the app more engaging with a simple feature.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ================= Skill ================= -->
+<section class="skills-section" id="skills">
+  <h2>Areas of Expertise</h2>
+  <div class="container skills-container">
+    <!-- Left Side: Image -->
+    <div class="skills-image">
+      <img src="asset/skill.jpg" alt="Skills Image">
+    </div>
+
+    <!-- Right Side: Buttons + Skills -->
+    <div class="skills-content">
+      <div class="skills-buttons">
+        <button class="skill-btn active" data-skill="business"><strong>Business</strong></button>
+        <button class="skill-btn" data-skill="tech"><strong>Tech</strong></button>
+        <button class="skill-btn" data-skill="strategy"><strong>Strategy</strong></button>
+        <button class="skill-btn" data-skill="design"><strong>Design</strong></button>
+      </div>
+      <div class="skills-list" id="skills-list">
+        <!-- Default Skill Items -->
+        <ul>
+          <li>Product Ownership</li>
+          <li>Data-driven Decision Making</li>
+          <li>Stakeholder Management</li>
+          <li>Process Development</li>
+          <li>Client Journey</li>
+          <li>KPI Definition & Tracking</li>
+          <li>B2B/B2C</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= RAW IDEA ================= -->
+<section class="raw-idea">
+  <div class="raw-idea-container">
+    <h2>What People are saying?</h2>
+
+    <a href="https://www.linkedin.com/in/shubham-mshr/" target="_blank">
+      <img src="Asset/shubham.png" alt="Shubham" />
+    </a>
+
+    <a href="https://www.linkedin.com/in/shrutika-bhongale-19281b178/" target="_blank">
+      <img src="Asset/shrutika.png" alt="Shrutika" />
+    </a>
+
+    <a href="https://www.linkedin.com/in/saha-n-b88368a5/" target="_blank">
+      <img src="Asset/Nivedita.png" alt="Nivedita" />
+    </a>
+
+    <a href="https://www.linkedin.com/in/alvitofaria/" target="_blank">
+      <img src="Asset/Alvito.png" alt="Alvito" />
+    </a>
+
+    <a href="https://www.linkedin.com/in/rosearnoldcwm/" target="_blank">
+      <img src="Asset/Arnolf.png" alt="Arnold" />
+    </a>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="investigation">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="investigation-text">
+      <h2>Let’s Connect</h2>
+      <p>
+        Feel free to reach out if you want to chat about work, side projects, feedback, or just want to geek out about the latest tech. I’m always open to new conversations, and I’ll respond faster than Batman responds to Bat-Signal. <br>(Unless it’s a really busy night... then I’ll get back to you ASAP.)
+      </p>
+    </div>
+
+    <!-- Image Section with Text Below -->
+    <div class="image-container">
+      <!-- LinkedIn -->
+      <div class="image-item">
+        <a href="https://www.linkedin.com/in/allan-rose-a13b07275/" target="_blank">
+          <img src="asset/linkedin.png" alt="LinkedIn">
+          <p>LinkedIn</p>
+        </a>
+      </div>
+
+      <!-- Email -->
+      <div class="image-item">
+        <a href="mailto:pmallan.rose@gmail.com">
+          <img src="asset/gmail.png" alt="Email">
+          <p>E-mail</p>
+        </a>
+      </div>
+
+<!-- WhatsApp -->
+<div class="image-item">
+  <a href="https://wa.me/919326482267" target="_blank">
+    <img src="asset/whatsapp.png" alt="WhatsApp">
+    <p>WhatsApp</p>
+  </a>
+</div>
+
+      <!-- Instagram -->
+      <div class="image-item">
+        <a href="https://www.instagram.com/_allan_rose_/" target="_blank">
+          <img src="asset/instagram.png" alt="Instagram">
+          <p>Instagram</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>The best time to start creating was yesterday. The second best time is now.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+/* ========= GLOBAL RESET & BODY ========= */
+body {
+  margin: 0;
+  background-color: #A6BBB4; /* Default green background */
+  color: #506860;
+  line-height: 1.6;
+}
+
+/* Apply Poppins to headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Apply Inter to body text */
+body, p, li, blockquote, figcaption {
+  font-family: 'Inter', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* ========= CONTAINER ========= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* ========= TYPOGRAPHY ========= */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #506860;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #506860;
+  font-weight: 300;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #506860;
+  font-weight: 300;
+}
+
+/* ========= HERO SECTION ========= */
+.hero {
+  background-color: #A6BBB4; /* Green background */
+  padding: 3rem 2rem;
+  color: #ffffff;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+.hero-text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #506860;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-text p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+  margin-bottom: 0.2rem;
+}
+.hero-image img {
+  width: 400px;       /* Adjust size as needed */
+  height: 400px;      /* Keep height equal to width for a perfect circle */
+  object-fit: cover;  /* Ensure image covers the container nicely */
+  border-radius: 50%; /* Make it circular */
+  display: inline-block; /* Ensure it respects dimensions */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Optional subtle shadow */
+  border: 4px solid white; /* Optional white border */
+}
+/* ================== CTA Button ================== */
+.cta-button {
+  display: inline-block;
+  background-color: #506860; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px 30px; /* Adjusted padding */
+  font-size: 1rem; /* Adjust text size */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+}
+
+.cta-button:hover {
+  background-color: #A6BBB4; /* Hover color */
+}
+
+
+/* ========= NAVBAR SECTION ========= */
+.navbar {
+  background-color: #A6BBB4; /* Green background */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center; /* Center everything inside navbar */
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links .nav-btn {
+  text-decoration: none; /* <-- important */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links .nav-btn:hover {
+  background-color: white;
+  color: #A6BBB4;
+  border-radius: 0.25rem;
+}
+
+.navbar-links .nav-btn.active {
+  position: relative;
+}
+
+.navbar-links .nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.work-section {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5; /* Light background */
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========= FOOTER ========= */
+.work-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #506860;
+}
+.work-item p{
+   color: #333;  
+}
+.work-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #6b7a78;
+}
+.work-header, .work-intro {
+  display: block;      /* Ensure block layout */
+  width: 100%;         /* Take full width */
+  margin: 0 auto;      /* Center if needed */
+}
+.work-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;  /* <-- change this from wrap to nowrap */
+  overflow-x: auto;   /* <-- optional: allows horizontal scroll on narrow screens */
+  padding-bottom: 1rem; /* optional: space for scrollbar */
+}
+
+.work-item {
+  flex: 1 1 calc(25% - 1.5rem); /* 4 items per row with gap */
+  background-color: #A4B9B2;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+}
+
+.work-item img {
+  width: auto;        /* Use actual image width */
+  height: auto;       /* Use actual image height */
+  max-width: 100%;    /* Limit to container width so it doesn’t overflow */
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center image horizontally */
+  object-fit: initial; /* Remove cropping/scaling */
+}
+
+.work-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #506860;
+}
+
+.work-desc {
+  font-size: 1rem;
+  color: #7a7a7a;
+  line-height: 1.4;
+}
+.work-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the link fill the container */
+}
+.work-item-link:hover .work-item {
+  transform: translateY(-5px); /* Keep your hover effect */
+  cursor: pointer;
+}
+
+/* ========= FOOTER ========= */
+.site-footer {
+  background-color: #A6BBB4; /* Green background */
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.site-footer .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.site-footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  background-color: #e0e0e0; /* Darker gray on hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+/* ========= ALTERNATE BACKGROUND SECTIONS ========= */
+
+section:not(.hero):not(.navbar):nth-child(odd) {
+  background-color: #EBDBAF; /* Green background for odd sections */
+}
+
+section:not(.hero):not(.navbar):nth-child(even) {
+  background-color: #A6BBB4; /* Yellow background for even sections  A6BBB4*/
+} 
+
+section:not(.hero):not(.navbar):nth-child(odd) h2,
+section:not(.hero):not(.navbar):nth-child(odd) p,
+section:not(.hero):not(.navbar):nth-child(odd) li {
+  color: #506860; /* Text color for odd sections */
+}
+
+section:not(.hero):not(.navbar):nth-child(even) h2,
+section:not(.hero):not(.navbar):nth-child(even) p,
+section:not(.hero):not(.navbar):nth-child(even) li {
+  color: #ffffff; /* Text color for even sections ffffff*/
+}
+
+
+/* ========= INVESTIGATION ========= */
+.investigation {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack the sections vertically */
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.investigation-text {
+  flex: 1;
+  max-width: 600px;
+  margin-bottom: 0rem; /* Space between the text and the image section */
+}
+
+.image-container {
+  display: flex; /* Layout the images in a row */
+  justify-content: space-between; /* Space images out evenly */
+  align-items: flex-end; /* Align images to the bottom */
+  gap: 2rem; /* Space between the images */
+  margin-top: 0rem;  /*Ensure there's space between text and images */
+  width: 100%; /* Ensure the image container takes full width */
+}
+
+.image-item {
+  text-align: center;
+  max-width: 250px; /* Limit the width of each image */
+  flex: 1; /* Let images take equal space */
+}
+
+.image-item img {
+  width: 90%; /* Make images responsive */
+  height: auto;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.image-item p {
+  font-size: 1rem;
+  color: #506860;
+  margin-top: 10px; /* Space between image and text */
+  font-style: italic; /* Optional: italicize the text */
+}
+
+
+/* ========= SKILLS SECTION FIXED CENTERED ========== */
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #EBDBAF;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  color: #506860;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Container centered with max width */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Left side: image */
+.skills-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.skills-image img {
+  width: 100%;
+  max-width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side: buttons + skills */
+.skills-content {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center; /* Change from flex-start to center */
+  text-align: left;
+}
+
+/* Vertical buttons */
+.skills-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Buttons */
+.skill-btn {
+  height: 62px; /* Increase height */
+  min-width: 160px;
+  padding: 0 1.5rem; /* Horizontal padding */
+  background-color: #A6BBB4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  /* Center the text inside the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skill-btn:hover,
+.skill-btn.active {
+  background-color: #506860;
+}
+
+/* Skills list */
+.skills-list {
+  flex: 1;
+}
+
+.skills-list ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  color: #506860;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.skills-list li::before {
+  content: "•";
+  color: #506860;
+  position: absolute;
+  left: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-list {
+    margin-top: 1.5rem;
+  }
+
+  .skill-btn {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .skills-image,
+  .skills-content {
+    max-width: 100%;
+  }
+}
+.skills-list li:hover {
+  color: #395044;
+  cursor: default;
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .skill-btn {
+    padding: 0 1rem;
+  }
+}
+/* ========= RAW IDEA ========= */
+.raw-idea {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #ffefef;
+}
+.raw-idea-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.raw-idea img{
+  margin-top: 40px;
+}
+.image-item a {
+  text-decoration: none;        /* Removes underline */
+  color: inherit;               /* Inherits text color from parent */
+  display: inline-block;        /* Keeps image and text block-level */
+  text-align: center;           /* Center text below image */
+}
+
+.image-item a:hover {
+  opacity: 0.8;                 /* Subtle hover effect */
+  transform: scale(1.02);       /* Slight zoom on hover */
+  transition: all 0.3s ease;
+}

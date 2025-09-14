@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Feature</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-links">
+      <a href="../index.html" class="nav-btn">Home</a>
+      <a href="../Aboutpage/index.html" class="nav-btn">About</a>
+      <a href="../index.html#work" class="nav-btn active">Work</a> 
+      <a href="../index.html#contact" class="nav-btn">Contact</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- ================= HERO SECTION ================= -->
+ <section class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <h1>Pet Owners Love, But Don’t Always Learn</h1>
+      <a href="#" class="cta-button"><strong>Feature</strong></a>
+    </div> 
+    <div class="hero-image">
+      <img src="Asset/hero.png" alt="hero-image" />
+    </div>
+  </div>
+ </section>
+
+  <!-- ================= INTRODUCTION ================= -->
+  <section class="introduction">
+  <div class="container intro-container">
+    <div class="intro-text">
+      <h2>The Problem We Couldn’t Ignore</h2>
+      <p>While pet ownership is rising globally, many pet parents engage more emotionally than educationally with their animals. In research across pet communities and forums, I noticed:</p>
+      <ul>
+        <li>Owners adore their pets but rarely seek new information about them.</li>
+      </ul>
+      <p>This creates an awareness gap. A lot of care mistakes happen not from negligence, but from simply not knowing better. Yet, asking users to read articles or complete onboarding lessons felt heavy-handed. I started wondering:“Can we lightly educate pet owners through something delightful and unobtrusive?”</p>
+    </div>
+    <div class="intro-image">
+      <img src="Asset/problem.png" alt="intro-image" />
+    </div>
+  </div>
+ </section>
+
+
+<section class="investigation">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="investigation-text">
+      <h2>Solution: Fun, Bite-Sized Education with Cat Facts</h2>
+      <p>The proposed feature introduces cat facts into a pet app—delivered either as push notifications or embedded on login. These facts are quirky, scientific, or behavioral tidbits meant to:</p>
+    </div>
+
+    <!-- Image Section with Text Below -->
+    <div class="image-container">
+      <!-- Image 1 -->
+      <div class="image-item">
+        <img src="asset/stickyness.png" alt="Agent 1">
+        <p>Delight users and increase app stickiness</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="image-item">
+        <img src="asset/nudge.png" alt="Agent 2">
+        <p>Nudge pet owners to learn something new</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="image-item">
+        <img src="asset/engagement.png" alt="Agent 3">
+        <p>Reinforce daily positive engagement with the app</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= RAW IDEA ================= -->
+<section class="raw-idea">
+  <div class="raw-idea-container">
+    <h2>Prototype: Workflow Automation Using n8n</h2>
+    <p>To quickly test this idea, I built a working prototype using n8n, an open-source workflow automation tool.</p>
+    <p>The workflow consists of a node that will get triggered at a specific daily interval. Once triggered, the node connects to a public Cat Facts API which returns a random fact in the form of a JSON response. This data is then processed and cleaned before being formatted into a readable message that gets pushed directly to my Gmail inbox, delivering a fresh cat fact every day. This was a great way to **test feasibility** and **play with content cadence**.</p>
+    <img src="Asset/workflow.png" alt="raw-idea" />
+  </div>
+</section>
+
+<!-- ================= HOW WE BUILT IT ================= -->
+  <section class="how-we-built">
+    <div class="container">
+      <div class="built-image">
+        <img src="Asset/UI.png" alt="solution-image" />
+      </div>
+      <div class="built-text">
+        <h2>Scaling to a Real Product Feature</h2>
+        <p>While the prototype sends facts to myself, the core logic is ready to be scaled. Here’s how it could work inside a real app:</p>
+        <ul>
+          <li>Trigger daily push with random cat fact</li>
+          <li>Tied to time-of-day preferences set by user</li>
+          <li>Display random cat fact on dashboard or after login</li>
+          <li>Show random cat facts when the page is loading</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="investigation">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="investigation-text">
+      <h2>Solution: Fun, Bite-Sized Education with Cat Facts</h2>
+      <p>The proposed feature introduces cat facts into a pet app—delivered either as push notifications or embedded on login. These facts are quirky, scientific, or behavioral tidbits meant to:</p>
+    </div>
+
+    <!-- Image Section with Text Below -->
+    <div class="image-container">
+      <!-- Image 1 -->
+      <div class="image-item">
+        <img src="asset/API.png" alt="Agent 1">
+        <p>Expose the fact-fetching logic via n8n’s webhook node</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="image-item">
+        <img src="asset/load.png" alt="Agent 2">
+        <p>App frontend pings it on load</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="image-item">
+        <img src="asset/time.png" alt="Agent 3">
+        <p>Schedule content drops via CMS</p>
+      </div>
+      <!-- Image 4 -->
+      <div class="image-item">
+        <img src="asset/N8N.png" alt="Agent 3">
+        <p>Use n8n to populate facts and clean them for tone and length</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= FINAL THOUGHT ================= -->
+<section class="final-thought">
+  <div class="container">
+    <div class="final-text">
+      <h2>What’s Next?</h2>
+      <p>I'd love to evolve this prototype into a real app feature and test how it affects retention and daily active usage. The goal is to create micro-engagement hooks that are low-effort, high-delight, with the added bonus of education.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL THOUGHT ================= -->
+<section class="final-thought ending">
+  <div class="container">
+    <div class="final-text">
+      <h2>Conclusion</h2>
+      <p>This project reflects how even small features can make a big difference, when they come from genuine user insight and are tested with real workflows. With tools like n8n, anyone can prototype smart, simple ideas that make digital products better.</p>
+    </div>
+    <div class="ending-image-wrapper">
+      <img src="Asset/finalwords.png" alt="intro-image" />
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>The best time to start creating was yesterday. The second best time is now.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
