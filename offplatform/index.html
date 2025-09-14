@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Case: Off-Platform Transactions</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        
+     /* New background styles */
+        background-image: url("./asset/background.png"); /* Your image URL*/
+        background-size: cover;  /* Ensures the image covers the whole page */
+        background-position: center; /* Centers the image */
+        background-repeat: repeat;  /* Prevents the image from repeating */
+        height: 100vh;  /*Ensures the body takes full height */
+        margin: 0; /* Removes default margin */
+    }
+/*F9E5E2*/
+
+   .section-card {
+    background: white;
+    border: 1px solid #E6E6E9;
+    border-radius: .6rem;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+    .accent {
+        color: #2C3E50;
+    }
+
+    .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    blockquote {
+        border-left: 3px solid #e2e8f0;
+        padding-left: 1rem;
+        color: #374151;
+    }
+
+    /* Fade-in effect */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(6px);
+        transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ========= FOOTER ========= */
+.site-footer {
+  background-color: #A6BBB4;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.site-footer .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.site-footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* ========= NAVBAR SECTION ========= */
+.navbar {
+  background-color: #A6BBB4; /* Green background */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center; /* Center everything inside navbar */
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links .nav-btn {
+  text-decoration: none; /* <-- important */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links .nav-btn:hover {
+  background-color: white;
+  color: #A6BBB4;
+  border-radius: 0.25rem;
+}
+
+.navbar-links .nav-btn.active {
+  position: relative;
+}
+
+.navbar-links .nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+</style>
+
+</head>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-links">
+      <a href="../index.html" class="nav-btn">Home</a>
+      <a href="../Aboutpage/index.html" class="nav-btn">About</a>
+      <a href="../index.html#work" class="nav-btn active">Work</a> 
+      <a href="../index.html#contact" class="nav-btn">Contact</a>
+    </div>
+  </div>
+</nav>
+<body class="bg-gray-50 text-slate-900">
+    <main class="max-w-6xl mx-auto px-6 py-10">
+        <div class="mb-10 fade-in">
+        <h1 class="text-4xl font-bold text-white-900">Product Case: Off-Platform Transactions</h1>
+    </div>
+
+    <header class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center fade-in">
+        <div>
+            <h2 class="text-3xl font-semibold leading-tight">Introduction: The Leak No One Sees Coming</h2>
+            <p class="mt-3 text-white-600 max-w-3xl">
+                One of the quietly persistent challenges for marketplaces like Uber is <strong>off-platform transactions</strong>,
+                cases where riders and drivers connect through the platform but transact outside of it afterward. This is routine in
+                urban ecosystems where repeat interactions occur (commutes, weekly services, tutoring, etc).
+            </p>
+        </div>
+        <div>
+            <img src="./asset/Group5.png" alt="Off-Platform Transactions Illustration" class="rounded-lg shadow-lg w-full object-cover">
+        </div>
+    </header>
+
+        <section id="why" class="mb-8 fade-in section-card p-6">
+            <h2 class="text-xl font-semibold accent">Why It Happens — Root Causes</h2>
+            <p class="mt-3 text-slate-600">This behaviour isn’t malicious. It’s driven by simple human psychology and economic rationale.</p>
+            <div class="mt-6 grid gap-4 grid-cols-1 md:grid-cols-2">
+                <div class="p-4 rounded-md border border-amber-200 bg-amber-100">
+                    <h3 class="font-semibold">💸 Cost-Saving</h3>
+                    <p class="text-slate-600 mt-2">Users and providers avoid platform fees rides or services happen off-platform to dodge commissions.</p>
+                    <p class="mt-2 text-sm text-slate-500">On-platform example: Riders skip Uber’s commission; cleaners skip UrbanCo’s cut.</p>
+                </div>
+                <div class="p-4 rounded-md border border-amber-200 bg-amber-100">
+                    <h3 class="font-semibold">🤝 Familiarity Bias</h3>
+                    <p class="text-slate-600 mt-2">People prefer a known, reliable face over a new match, trust handoff encourages direct contact.</p>
+                    <p class="mt-2 text-sm text-slate-500">“I trust Ramesh — why risk a new driver?”</p>
+                </div>
+                <div class="p-4 rounded-md border border-amber-200 bg-amber-100">
+                    <h3 class="font-semibold">🔄 Repeat Convenience</h3>
+                    <p class="text-slate-600 mt-2">Routine needs are easier to coordinate 1:1, daily commutes or weekly services need less rebooking friction.</p>
+                </div>
+                <div class="p-4 rounded-md border border-amber-200 bg-amber-100">
+                    <h3 class="font-semibold">📱 Platform Friction</h3>
+                    <p class="text-slate-600 mt-2">Rebooking via the app may feel slower or unpredictable. Direct messaging (WhatsApp) feels immediate.</p>
+                    <p class="mt-2 text-sm text-slate-500">“Why scroll and pray when I can just WhatsApp him?”</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="mb-8 fade-in section-card p-6">
+            <h2 class="text-xl font-semibold accent">The Systemic Fallout — Impact</h2>
+            <div class="mt-4">
+                <h3 class="font-semibold">Erosion of the Platform’s Core Value</h3>
+                <p class="mt-2 text-slate-600">If the platform is only a connector and that connection can be reused outside, the value proposition erodes. Matching, tracking, safety and dispute resolution, the platform’s guardrails, are bypassed.</p>
+                <ul class="mt-3 list-disc pl-5 text-slate-600">
+                    <li>Matching + Tracking + Safety = Platform value</li>
+                    <li>Off-platform removes these guardrails and shifts risk away from users</li>
+                </ul>
+            </div>
+            <div class="mt-6">
+                <h3 class="font-semibold">Network Effect Decay</h3>
+                <p class="mt-2 text-slate-600">Two-sided platforms rely on volume. Off-platform pairs reduce supply visibility, distort demand models, and shrink liquidity, compounding at scale.</p>
+                <blockquote class="mt-3">
+                    <strong>Example:</strong> For a platform like Uber, even a 2% leakage rate can translate into tens of millions in lost GMV and crucial data monthly.
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="mb-8 fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-lg font-semibold flex items-center gap-2">🛡️ Decay of Trust &amp; Safety Loops</h2>
+                    <ul class="list-disc list-inside mt-3 space-y-1 text-slate-600">
+                        <li>Rating systems, identity verification, customer support, GPS tracking, all fall apart when the ride or service happens off-platform.</li>
+                        <li>Yet if something goes wrong, the user may still blame the brand.</li>
+                    </ul>
+                    <p class="mt-3 text-slate-600">
+                        The platform loses control but keeps the liability, a dangerous trade.
+                    </p>
+                    <div class="bg-amber-100 p-3 rounded mt-4 text-slate-800">
+                        A rider robbed in a side deal may still blame the platform by saying, "OLA driver robbed me."
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-lg font-semibold flex items-center gap-2">📉 Broken Data = Broken Product</h2>
+                    <ul class="list-disc list-inside mt-3 space-y-1 text-slate-600">
+                        <li>No ride/service logs → no personalization</li>
+                        <li>Missing feedback loops → worse recommendations</li>
+                        <li>Incomplete histories → less fraud detection</li>
+                        <li>Broken frequency patterns → churn misidentification</li>
+                    </ul>
+                    <div class="bg-amber-100 p-3 rounded mt-4 text-slate-800">
+                        Uber may see a user as inactive, unaware they ride daily with the same driver off-app.
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-lg font-semibold flex items-center gap-2">🔗 Network Effect Decay</h2>
+                    <p class="mt-3 text-slate-600">
+                        Two-sided platforms thrive on volume. The more users and providers on-platform, the faster and better the matches.
+                    </p>
+                    <p class="mt-3 text-slate-600 font-bold">
+                        Off-platform relationships:
+                    </p>
+                    <ul class="list-disc list-inside ml-5 mt-2 space-y-1 text-slate-600">
+                        <li>Reduce supply visibility</li>
+                        <li>Distort demand models</li>
+                        <li>Shrink liquidity in key zones</li>
+                    </ul>
+                    <div class="bg-amber-100 p-3 rounded mt-4 text-slate-800">
+                        A customer unsatisfied with an off-platform cleaner still leaves a negative UrbanCo review.
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--class="mb-8 fade-in section-card-->
+
+        <section id="solution-intro" class="mb-12">
+        <div class="bg-amber-50 border border-amber-300 p-8 rounded-xl shadow-sm mb-12 fade-in">
+            <h3 class="text-3xl font-bold text-slate-700 mb-8">What do we do?</h3>
+            <h4 class="text-2xl font-semibold text-amber-600 mb-4">
+                Make staying on-platform the better choice
+            </h4>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                We can’t eliminate off-platform behavior entirely. But we can make staying on-platform safer, easier, and more rewarding, so leaving feels like a downgrade.
+            </p>
+        </div>
+    </section>
+    <script>
+        // Set up IntersectionObserver to add 'visible' class when the element enters the viewport
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing after the animation
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is in the viewport
+        });
+
+        fadeInElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+        <section id="solution-details" class="mb-8">
+        <div class="grid grid-cols-4 gap-6 fade-in">
+            <div class="cursor-pointer bg-amber-100 hover:bg-amber-200 p-6 rounded-lg shadow-md relative" onclick="toggleTable(1)" id="box-1">
+                <h4 class="text-xl font-semibold text-amber-700">Make Repeat Booking Frictionless</h4>
+                <p class="mt-2 text-amber-600">Simplify rebooking and retain users</p>
+                <span class="absolute bottom-2 right-3 text-xs text-blue-500">Click here</span>
+            </div>
+            <div class="cursor-pointer bg-amber-100 hover:bg-amber-200 p-6 rounded-lg shadow-md relative" onclick="toggleTable(2)" id="box-2">
+                <h4 class="text-xl font-semibold text-amber-700">Layer in Platform-Only Protections</h4>
+                <p class="mt-2 text-amber-600">Safety & benefits only on-platform</p>
+                <span class="absolute bottom-2 right-3 text-xs text-blue-500">Click here</span>
+            </div>
+            <div class="cursor-pointer bg-amber-100 hover:bg-amber-200 p-6 rounded-lg shadow-md relative" onclick="toggleTable(3)" id="box-3">
+                <h4 class="text-xl font-semibold text-amber-700">Introduce Loyalty That Pays</h4>
+                <p class="mt-2 text-amber-600">Rewards that keep users coming back</p>
+                <span class="absolute bottom-2 right-3 text-xs text-blue-500">Click here</span>
+            </div>
+            <div class="cursor-pointer bg-amber-100 hover:bg-amber-200 p-6 rounded-lg shadow-md relative" onclick="toggleTable(4)" id="box-4">
+                <h4 class="text-xl font-semibold text-amber-700">Subtle Detection & Prevention</h4>
+                <p class="mt-2 text-amber-600">Identify and curb off-platform moves</p>
+                <span class="absolute bottom-2 right-3 text-xs text-blue-500">Click here</span>
+            </div>
+        </div>
+
+        <div id="table-1" class="hidden mt-6 fade-in">
+            <table class="min-w-full border-collapse border border-amber-300 rounded-lg overflow-hidden">
+                <thead class="bg-amber-200">
+                    <tr>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Feature</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Description</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Strategic Value</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-amber-50">
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Smart Reconnect</td>
+                        <td class="border border-amber-200 px-4 py-2">One-tap “Book Again” with the same driver</td>
+                        <td class="border border-amber-200 px-4 py-2">Converts leakage-prone behavior into a native flow</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Rebooking Shortcut</td>
+                        <td class="border border-amber-200 px-4 py-2">“Continue with Ramesh?”</td>
+                        <td class="border border-amber-200 px-4 py-2">Nudges casual repeaters back into the funnel</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Preferred Driver Tag</td>
+                        <td class="border border-amber-200 px-4 py-2">Riders can optionally tag favorite drivers</td>
+                        <td class="border border-amber-200 px-4 py-2">Formalizes rider-driver bonds within the app</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="table-2" class="hidden mt-6 fade-in">
+            <table class="min-w-full border-collapse border border-amber-300 rounded-lg overflow-hidden">
+                <thead class="bg-amber-200">
+                    <tr>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Feature</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Description</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Strategic Value</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-amber-50">
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">On-Platform Safety Cover</td>
+                        <td class="border border-amber-200 px-4 py-2">Insurance, 24/7 help, trip tracking</td>
+                        <td class="border border-amber-200 px-4 py-2">Reminds users of what they lose when they leave</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Incident Amnesty</td>
+                        <td class="border border-amber-200 px-4 py-2">Support only if booked via app</td>
+                        <td class="border border-amber-200 px-4 py-2">Creates real consequences for going off-platform</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Safety-Nudging Prompts</td>
+                        <td class="border border-amber-200 px-4 py-2">“Book here to stay protected”</td>
+                        <td class="border border-amber-200 px-4 py-2">Reframes risk without being punitive</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="table-3" class="hidden mt-6 fade-in">
+            <table class="min-w-full border-collapse border border-amber-300 rounded-lg overflow-hidden">
+                <thead class="bg-amber-200">
+                    <tr>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Feature</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Description</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Strategic Value</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-amber-50">
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Rider Rewards Program</td>
+                        <td class="border border-amber-200 px-4 py-2">Loyalty points → discounts, upgrades</td>
+                        <td class="border border-amber-200 px-4 py-2">Tangible upside for sticking with Uber</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Driver Tier System</td>
+                        <td class="border border-amber-200 px-4 py-2">Platinum drivers get perks</td>
+                        <td class="border border-amber-200 px-4 py-2">Keeps supply-side motivated</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Pairing Perks</td>
+                        <td class="border border-amber-200 px-4 py-2">Discounts for repeat rides with same driver</td>
+                        <td class="border border-amber-200 px-4 py-2">Gamifies repeat usage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="table-4" class="hidden mt-6 fade-in">
+            <table class="min-w-full border-collapse border border-amber-300 rounded-lg overflow-hidden">
+                <thead class="bg-amber-200">
+                    <tr>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">Technique</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">What It Does</th>
+                        <th class="border border-amber-300 px-4 py-2 text-amber-700">How It Helps</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-amber-50">
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Match Pattern Analysis</td>
+                        <td class="border border-amber-200 px-4 py-2">Flags repeat rider-driver churn</td>
+                        <td class="border border-amber-200 px-4 py-2">Leak proxy without chats</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Session Drop Tracking</td>
+                        <td class="border border-amber-200 px-4 py-2">Detects sudden app drop-offs</td>
+                        <td class="border border-amber-200 px-4 py-2">Suggests off-platform rides</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-amber-200 px-4 py-2">Soft Interventions</td>
+                        <td class="border border-amber-200 px-4 py-2">Exit surveys / prompts</td>
+                        <td class="border border-amber-200 px-4 py-2">Gather signal without accusation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+        <section id="ui-carousel" class="mb-8 fade-in section-card p-6">
+            <h1 class="text-3xl font-semibold accent">How we do it</h1>
+            <div class="mt-6 grid gap-4 grid-cols-1 md:grid-cols-1">
+                <div class="relative w-full overflow-hidden rounded-md shadow-lg">
+                    <img id="carousel-image" src="./asset/SolutionUI1.png" alt="Smart Reconnect UI Solution 1" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 flex items-center justify-between p-4">
+                        <button id="prev-btn" class="p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button id="next-btn" class="p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="retention-loop" class="mb-8 fade-in section-card p-6">
+    <h1 class="text-xl font-semibold accent">Retention Loop Reinforcement</h1>
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+        <div class="bg-gray-100 p-6 rounded-md">
+            <h2 class="text-lg font-bold mb-2 text-red-600">Current Off-Platform Behavior:</h2>
+            <ul class="list-none text-left space-y-2">
+                <li class="flex items-start">
+                    <span class="text-red-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    User gets matched with good service provider
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    User asks for number → Services continue off-platform
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    Company loses control, data, and revenue
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-gray-100 p-6 rounded-md">
+            <h2 class="text-lg font-bold mb-2 text-green-600">New Ideal Loop:</h2>
+            <ul class="list-none text-left space-y-2">
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    User rebooks service in 1 tap
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    App shows loyalty incentives + protects trip
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    Both parties gain more by staying on-platform
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-600 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    Company strengthens usage data, improves trust, earns commission
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="user-stories" class="mb-8 fade-in section-card p-6">
+    <h1 class="text-xl font-semibold accent">User Stories</h1>
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+        <div class="bg-white p-6 rounded-md">
+    <img src="./asset/UserstoriesDriver.png" alt="User Stories Driver" class="w-full h-auto rounded-md" /> 
+</div>
+
+        <div class="bg-white p-6 rounded-md">
+    <img src="./asset/UserstoriesRider.png" alt="User Stories Rider" class="w-full h-auto rounded-md" />
+</div>
+    </div>
+</section>
+        <section id="final" class="mb-8 fade-in section-card p-6">
+            <h2 class="text-xl font-semibold accent">Final Thought</h2>
+            <blockquote class="p-6 my-8 border-l-4 border-amber-300 bg-amber-50 italic text-gray-700">
+    <p class="text-xl font-semibold leading-tight">
+        People don’t leave platforms out of malice, they leave because the alternative feels easier or cheaper.
+    </p>
+    <p class="mt-4">
+        The best platforms don’t beg users to stay. They design systems where <strong>leaving feels like a downgrade.</strong>
+    </p>
+</blockquote>
+        </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>The best time to start creating was yesterday. The second best time is now.</p>
+  </div>
+</footer>
+    </main>
+
+    <script>
+        // Table toggle functionality
+        let currentTable = null;
+        function toggleTable(num) {
+            const table = document.getElementById(`table-${num}`);
+            if (currentTable && currentTable !== table) {
+                currentTable.classList.add("hidden");
+            }
+            if (table.classList.contains("hidden")) {
+                table.classList.remove("hidden");
+                currentTable = table;
+            } else {
+                table.classList.add("hidden");
+                currentTable = null;
+            }
+        }
+
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselImage = document.getElementById('carousel-image');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const images = [
+                "./asset/SolutionUI1.png",
+                "./asset/SolutionUI2.png",
+                "./asset/SolutionUI3.png",
+                "./asset/SolutionUI4.png"
+            ];
+            let currentImageIndex = 0;
+
+            const showImage = (index) => {
+                carouselImage.src = images[index];
+                carouselImage.alt = `Smart Reconnect UI Solution ${index + 1}`;
+            };
+
+            const nextImage = () => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                showImage(currentImageIndex);
+            };
+
+            const prevImage = () => {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                showImage(currentImageIndex);
+            };
+
+            if (nextBtn) nextBtn.addEventListener('click', nextImage);
+            if (prevBtn) prevBtn.addEventListener('click', prevImage);
+
+        });
+
+        // Scroll to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const href = a.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade-in effect on scroll
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+    </script>
+</body>
+</html>
