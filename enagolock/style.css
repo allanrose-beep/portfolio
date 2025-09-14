@@ -1,0 +1,464 @@
+/* ========= GLOBAL RESET & BODY ========= */
+body {
+  margin: 0;
+  background-color: #A6BBB4; /* Default green background */
+  color: #506860;
+  line-height: 1.6;
+}
+
+/* Apply Poppins to headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Apply Inter to body text */
+body, p, li, blockquote, figcaption {
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* ========= CONTAINER ========= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* ========= TYPOGRAPHY ========= */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #506860;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #506860;
+  font-weight: 300;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #506860;
+  font-weight: 300;
+}
+
+/* ========= HERO SECTION ========= */
+.hero {
+  background-color: #A6BBB4; /* Green background */
+  padding: 3rem 2rem;
+  color: #ffffff;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-text p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+/* ================== CTA Button ================== */
+.cta-button {
+  display: inline-block;
+  background-color: #506860; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px 30px; /* Adjusted padding */
+  font-size: 1rem; /* Adjust text size */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+}
+
+.cta-button:hover {
+  background-color: #A6BBB4; /* Hover color */
+}
+
+/* ========= NAVBAR SECTION ========= */
+.navbar {
+  background-color: #A6BBB4; /* Green background */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center; /* Center everything inside navbar */
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links .nav-btn {
+  text-decoration: none; /* <-- important */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links .nav-btn:hover {
+  background-color: white;
+  color: #A6BBB4;
+  border-radius: 0.25rem;
+}
+
+.navbar-links .nav-btn.active {
+  position: relative;
+}
+
+.navbar-links .nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.work-section {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5; /* Light background */
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========= INTRODUCTION ========= */
+.introduction {
+  padding: 3rem 2rem;
+  background-color: #EBDBAF; /* Set intro to yellow */
+}
+
+.intro-text,
+.intro-image {
+  flex: 1;
+}
+
+.intro-container {
+  flex-direction: row-reverse;
+}
+
+.intro-image img {
+  max-width: 100%;
+}
+
+/* ========= FOOTER ========= */
+.site-footer {
+  background-color: #A6BBB4; /* Green background */
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.site-footer .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.site-footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+/* ========= ALTERNATE BACKGROUND SECTIONS ========= */
+
+section:not(.hero):not(.navbar):nth-child(odd) {
+  background-color: #EBDBAF; /* Green background for odd sections */
+}
+
+section:not(.hero):not(.navbar):nth-child(even) {
+  background-color: #A6BBB4; /* Yellow background for even sections  A6BBB4*/
+} 
+
+section:not(.hero):not(.navbar):nth-child(odd) h2,
+section:not(.hero):not(.navbar):nth-child(odd) p,
+section:not(.hero):not(.navbar):nth-child(odd) li {
+  color: #506860; /* Text color for odd sections */
+}
+
+section:not(.hero):not(.navbar):nth-child(even) h2,
+section:not(.hero):not(.navbar):nth-child(even) p,
+section:not(.hero):not(.navbar):nth-child(even) li {
+  color: #ffffff; /* Text color for even sections ffffff*/
+}
+
+/* ========= INVESTIGATION ========= */
+.investigation {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack the sections vertically */
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.investigation-text {
+  flex: 1;
+  max-width: 600px;
+  margin-bottom: 0rem; /* Space between the text and the image section */
+}
+
+.image-container {
+  display: flex; /* Layout the images in a row */
+  justify-content: space-between; /* Space images out evenly */
+  align-items: flex-end; /* Align images to the bottom */
+  gap: 2rem; /* Space between the images */
+  margin-top: 0rem;  /*Ensure there's space between text and images */
+  width: 100%; /* Ensure the image container takes full width */
+}
+
+.image-item {
+  text-align: center;
+  max-width: 250px; /* Limit the width of each image */
+  flex: 1; /* Let images take equal space */
+}
+
+.image-item img {
+  width: 90%; /* Make images responsive */
+  height: auto;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.image-item p {
+  font-size: 1rem;
+  color: #506860;
+  margin-top: 10px; /* Space between image and text */
+  font-style: italic; /* Optional: italicize the text */
+}
+/* ========= USER STORIES ========= */
+.user-stories-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  user-select: none;
+}
+
+.user-stories-image img {
+  width: 100%; /* Makes the image full width */
+  height: auto; /* Maintain aspect ratio */
+  user-select: none;
+}
+.how-we-built .container{
+  display: flex;
+  /* flex-direction: row-reverse; This reverses the order of children */
+  align-items: center; /* Optional: vertically center items */
+  gap: 2rem; /* Optional: space between the image and text */  
+}
+/* ========= SOLUTION ========= */
+.solution,
+.how-we-built{
+  padding: 3rem 2rem;
+}
+.solution-text,
+.solution-image,
+.built-text,
+.built-image {
+  flex: 1;
+}
+
+.built-image {
+  text-align: center;
+}
+/* ========= CORE INSIGHT ========= */
+.core-insight {
+  display: flex; /* Use flexbox to align elements */
+  flex-direction: row-reverse; /* Align text and quote side by side */
+  padding: 3rem 2rem;
+  justify-content: space-between; /* Space between core text and quote */
+  align-items: flex-start; /* Align items at the start (top) */
+}
+
+.core-insight .container {
+  max-width: 1200px;
+  display: flex; /* Make the container a flexbox */
+  justify-content: space-between; /* Space out core-text and quote-text */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.core-insight .core-text {
+  text-align: left; /* Align header and body text to the left */
+  flex: 1; /* Take up available space */
+  max-width: 500px; /* Prevent text from stretching too wide */
+  margin-right: 2rem; /* Space between the text and quote */
+}
+
+.quote-text {
+  display: flex;            /* Enable flexbox for stacking elements */
+  flex-direction: column;   /* Stack the quote mark and text vertically */
+  align-items: flex-start;  /* Align them to the left */
+  margin-top: 20px;         /* Adjust vertical spacing between other content */
+}
+
+/* Quote mark settings */
+.quote-mark {
+  font-family: "Poor Richard", cursive;
+  font-size: 8rem;
+  color: #506860;
+  margin-bottom: 0px;   /* Space between the quote mark and the text */
+  position: relative;
+  top: 90px;            /* Control the position of the quote mark */
+}
+
+/* Quote text settings */
+.quote-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #506860;
+  max-width: 450px;
+  margin-top: 0;          /* Avoid extra space above the text */
+}
+
+/* Impact Section */
+.impact-section {
+  text-align: center;
+}
+
+.impact-table {
+  margin-top: 2rem;
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.impact-table table {
+  width: auto;
+  min-width: 600px;
+  max-width: 100%;
+  border-collapse: collapse;
+  background-color: #EBDBAF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.impact-table th,
+.impact-table td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border: 2px solid #ccc;
+}
+
+.impact-table th {
+  background-color: var(--misty-rose);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.impact-table td {
+  white-space: normal;
+}
+/* ================= FINAL THOUGHT ================= */
+.final-thought {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.final-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-text blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #506860; /* Set text color to #506860 */
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border-left: 5px solid #506860; /* Left border with color #506860 */
+  background-color: transparent; /* Set background to transparent */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.final-text blockquote strong {
+  font-size: 1.6rem;
+  color: #506860; /* Strong text also in #506860 */
+}
+
+/* ========= RESPONSIVENESS ========= */
+@media (max-width: 768px) {
+  .hero,
+  .introduction,
+  .core-insight,
+  .solution,
+  .how-we-built,
+  .final-thought {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text,
+  .core-text {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .lofi-images {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL Statistics || Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-links">
+      <a href="../index.html" class="nav-btn">Home</a>
+      <a href="../Aboutpage/index.html" class="nav-btn">About</a>
+      <a href="../index.html#work" class="nav-btn active">Work</a> 
+      <a href="../index.html#contact" class="nav-btn">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- ================= HERO SECTION ================= -->
+ <section class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <h1>IPL Statistics Dashboard</h1>
+      <p><strong>Role:</strong> Business Analyst</p>
+      <a href="#" class="cta-button"><strong>Dashboard</strong></a>
+    </div> 
+    <div class="hero-image">
+      <img src="Asset/certificate.png" alt="hero-image" />
+    </div>
+  </div>
+ </section>
+
+  <!-- Project Overview -->
+  <section class="overview fade-section">
+    <div class="container two-col">
+      <div class="text">
+        <h2>Project Overview</h2>
+        <p>In 2023, while completing my Business Analytics program with UpGrad, I got the opportunity 
+           to work on a semi-final project that turned out to be one of the most rewarding experiences of the course. 
+           The brief was simple on paper but layered in execution: <br> <strong>Build a fully interactive dashboard to visualize IPL statistics.</strong></p>
+      </div>
+      <div class="intro-image">
+        <img src="asset/hero.png" alt="IPL Dashboard Hero Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Brief -->
+<section class="brief fade-section">
+  <div class="container brief-flex">
+    <div class="brief-text">
+      <h2>The Project Brief</h2>
+      <p>I was given two datasets:</p>
+      <ul>
+        <li>One with match-level insights</li>
+        <li>Another with ball-by-ball delivery details</li>
+      </ul>
+      <p>My goal was to combine these datasets and build a comprehensive Tableau dashboard that could serve as a powerful tool for sports journalists — specifically, the Sports Editor and design team at a fictional news agency. They would use it to pull out quick insights, create infographics, and better understand the trends in the IPL from 2008 onwards.</p>
+    </div>
+    <div class="brief-image">
+      <img src="asset/brief.jpg" alt="brief-image" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- My Approach -->
+  <section class="approach fade-section">
+    <div class="container two-col reverse">
+      <div class="intro-image">
+        <img src="asset/roughwireframe.jpg" alt="Wireframe Sketch">
+      </div>
+      <div class="text">
+        <h2>My Approach</h2>
+        <p>I started by thoroughly examining both datasets to understand the structure and identify overlaps. The data was messy — scattered across sheets and riddled with inconsistencies. So, the first major task was cleaning, merging, and organizing the data using Excel. Once I had a clean base, I looked at the headers and started noting down the parts I wanted to include on the dashboard.</p> 
+        <p>Before jumping into Tableau, I took a low-tech approach — I grabbed a piece of paper and sketched out how I wanted the dashboard to look. This wireframe helped me visualize the flow and determine what filters and visual elements would add the most value.</p> 
+        <p>Once I was clear on the layout, I started building the dashboard in Tableau — one chart at a time. Eventually, I stitched everything together into a single interactive dashboard.</p> 
+
+    </div>
+    </div>
+  </section>
+
+<!-- What I Built -->
+<section class="built fade-section">
+  <div class="dashboard-container">
+    <h2>What I Built</h2>
+    <ul>
+      <li><strong>Season Filter Panel:</strong> A vertical panel with clickable buttons to view data season-wise from 2008 to 2017.</li>
+      <li><strong>Top Performers at a Glance:</strong> A section showcasing the highest team totals, Orange Cap (most runs), and Purple Cap (most wickets) players.</li>
+      <li><strong>Toss vs Match Win Analysis:</strong> A donut chart showing how often the toss winner ended up winning the match, categorized by whether they chose to bat or field.</li>
+      <li><strong>Dismissal Breakdown:</strong> A pie chart revealing how players typically got out — from catches to LBWs.</li>
+      <li><strong>Average Runs Per Match:</strong> A bar chart comparing teams based on their average match scores.</li>
+      <li><strong>Most Played Venues:</strong> A geographical heatmap showing which stadiums hosted the most IPL games.</li>
+    </ul>
+
+    <!-- Tableau embed -->
+    <figure class="dashboard-embed">
+      <div class="dashboard-wrapper">
+        <div class='tableauPlaceholder' id='viz1756636568229' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Dashboard 1' 
+                   src='https://public.tableau.com/static/images/ta/tableauembed_17560482752280/Dashboard1/1_rss.png' 
+                   style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='tableauembed_17560482752280/Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/ta/tableauembed_17560482752280/Dashboard1/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>
+      </div>
+      <figcaption class="iframe-caption">This is the actual dashboard embedded via Tableau.</figcaption>
+    </figure>
+  </div>
+
+
+<!-- Tableau script -->
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1756636568229');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  vizElement.style.width = '100%';
+  vizElement.style.height = '100%';
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+</section>
+
+<!-- Tools & Techniques -->
+<section class="investigation">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="investigation-text">
+      <h2>Technical Implementation & Challenges Addressed</h2>
+    </div>
+
+    <!-- Image Section with Text Below -->
+    <div class="image-container">
+      <!-- Image 1 -->
+      <div class="image-item">
+        <img src="asset/clean.png" alt="Agent 1">
+        <p>Data Preparation:<br>I cleaned and structured the fragmented dataset using Excel, transforming it into an analysis-ready format.</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="image-item">
+        <img src="asset/visualize.png" alt="Agent 2">
+        <p>Data Visualization:<br>I created interactive dashboards in Tableau using various charts (bar, pie, donut, and heatmaps) and optimized performance for large datasets through aggregation and other techniques.</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="image-item">
+        <img src="asset/UX.png" alt="Agent 3">
+        <p>User Interactivity:<br>To enhance user experience, I integrated parameter controls, calculated fields, and action filters, along with clear legends and tooltips for dynamic and easy data exploration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>The best time to start creating was yesterday. The second best time is now.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1756048516965');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+
+    if (divElement.offsetWidth > 800) {
+      vizElement.style.width = '1200px';
+      vizElement.style.height = '620px';
+    } else if (divElement.offsetWidth > 500) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = '1200px';
+    } else {
+      vizElement.style.width = '100%';
+      vizElement.style.height = '1200px';
+    }
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script> 
+</body>
+</html>

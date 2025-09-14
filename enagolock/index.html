@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Portfolio Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-links">
+      <a href="../index.html" class="nav-btn">Home</a>
+      <a href="../Aboutpage/index.html" class="nav-btn">About</a>
+      <a href="../index.html#work" class="nav-btn active">Work</a> 
+      <a href="../index.html#contact" class="nav-btn">Contact</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- ================= HERO SECTION ================= -->
+ <section class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <h1>Protecting Academic Data, One Manuscript at a Time</h1>
+      <p><strong>Role:</strong> Product Manager</p>
+      <p><strong>Company:</strong> Crimson Interactive</p>
+      <p><strong>Brands Involved:</strong> Enago, Publication Support, Ulatus (PS)</p>
+      <p><strong>Impact:</strong> lowered the order form drop-off rate by 16.8%</p> 
+      <a href="#" class="cta-button"><strong>Strategy</strong></a>
+    </div> 
+    <div class="hero-image">
+      <img src="Asset/hero.png" alt="hero-image" />
+    </div>
+  </div>
+ </section>
+
+  <!-- ================= INTRODUCTION ================= -->
+  <section class="introduction">
+  <div class="container intro-container">
+    <div class="intro-text">
+      <h2>Background</h2>
+      <p>In 2023, a senior editor at Enago highlighted a recurring problem: high-value manuscripts sometimes included sensitive personal data like patient info, grant IDs, or unpublished results.</p>
+      <p>As remote work grew, authors became hesitant to share documents involving grants or sensitive data. Without in-person safeguards, universities worried about editorial mishandling, threatening the traditional editing model.</p>
+      <p style="margin-top: 2rem; font-style: italic; color: #555;">
+        I collaborated with editors, clients, and tech teams to assess the issue, spoke with users, mapped workflows, and found that insecure data handling was eroding author trust in traditional editing.
+      </p>    
+      </div>
+    <div class="intro-image">
+      <img src="Asset/background2.png" alt="intro-image" />
+    </div>
+  </div>
+ </section>
+
+<!-- ================= Context ================= -->
+<section class="investigation">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="investigation-text">
+      <h2>Context</h2>
+      <p>A casual exchange of documents feels harmless. But multiply it across hundreds of submissions, and you get:</p>
+    </div>
+
+    <!-- Image Section with Text Below -->
+    <div class="image-container">
+      <!-- Image 1 -->
+      <div class="image-item">
+        <img src="asset/leak.png" alt="Agent 1">
+        <p>Sensitive data floating across unencrypted personal inboxes</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="image-item">
+        <img src="asset/access.png" alt="Agent 2">
+        <p>No access logs or audit trails</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="image-item">
+        <img src="asset/risk.png" alt="Agent 3">
+        <p>Risk of accidental forwarding or leaks</p>
+      </div>
+    </div>
+        <div class="investigation-text">
+      <p>For any institution managing dozens of such papers monthly, this is a ticking time bomb.</p>
+      <p style="margin-top: 2rem; font-style: italic; color: #555;">
+        I analyzed submission volumes and workflows to identify leak points. Using data and patterns, I demonstrated to leadership that this was a product issue, not just an operational hiccup.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Current workflow ================= -->
+<section class="user-stories-section">
+  <div class="user-stories-image">
+    <img src="asset/Context2.png" alt="User Stories Visual" />
+  </div>
+</section>
+
+  <!-- ================= The Challenge ================= -->
+  <section class="introduction">
+  <div class="container intro-container">
+    <div class="intro-image">
+      <img src="Asset/balance2.png" alt="intro-image" />
+     </div>
+    <div class="intro-text">
+      <h2>The Challenge</h2>
+      <p>Authors grew hesitant to share documents involving grants, IP, or sensitive data. Without in-person safeguards, universities feared editorial mishandling, weakening the traditional model.</p>
+      <p style="margin-top: 2rem; font-style: italic; color: #555;">
+        The challenge was balancing editors’ need for simplicity and speed with universities’ demand for enterprise-grade security. My role was to design a solution that met both without slowing the process.
+      </p>    
+      </div>
+     
+  </div>
+ </section>
+
+   <!-- ================= Solution ================= -->
+  <section class="how-we-built">
+    <div class="container">
+      <div class="built-text">
+        <h2>Solution: Patch to Platform</h2>
+        <p>At the time, Enago’s tech team had a small internal tool, nothing fancy, just a basic encrypt-decrypt utility to obscure author names and emails for internal transfers. It worked, but it was clearly duct tape over a growing leak.</p>
+        <p><strong>Here’s what we did:</strong></p>
+        <ul>
+          <li>We Created a risk map of the editing workflow with the tech team.</li>
+          <li>We laid out key requirements like access control, time limits, and audit logs.</li>
+          <li>Suggesting the .enago file extension as a visible marker so users could see their files were protected.</li>
+        </ul>
+      </div>
+          <!-- Quote Section -->
+<div class="quote-text">
+  <div class="quote-mark">“</div>
+  <p>We went from encrypting text strings to protecting intellectual property at the institutional level.</p>
+</div>
+</section>
+    </div>
+    
+  </section>
+
+  <!-- ================= INTRODUCTION ================= -->
+  <section class="introduction">
+  <div class="container intro-container">
+    <div class="intro-text">
+      <h2>How it Works</h2>
+         <ul>
+          <li>Authors upload files via the Inquiry form.</li>
+          <li>Enago encrypts the document into a .enago file</li>
+          <li>The file is viewable only through secure preview.</li>
+          <li>Editors can only access files with time-bound keys</li>
+          <li>Admins (authors) receive full access logs and traceability.</li>
+         </ul>
+      <p style="margin-top: 2rem; font-style: italic; color: #555;">
+        I mapped the full user journey and worked with engineering to ensure the system was both secure and user-friendly. Security couldn’t feel like extra work, it had to be seamlessly integrated into the existing workflow.
+      </p>    
+      </div>
+    <div class="intro-image">
+      <img src="Asset/encrypt.png" alt="howitworks-image" />
+    </div>
+  </div>
+ </section>
+
+<!-- IMPACT -->
+  <section id="impact" class="solution-section">
+    <div class="container">
+      <h2>Impact & Value Proposition</h2>
+      <div class="impact-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Benefit To...</th>
+              <th>Value Proposition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Authors</td>
+              <td>Complete peace of mind knowing their intellectual property is secure.</td>
+            </tr>
+            <tr>
+              <td>Universities</td>
+              <td>Ensured compliance with data privacy laws and enhanced institutional reputation.</td>
+            </tr>
+            <tr>
+              <td>Enago</td>
+              <td>Streamlined, secure, and integrated workflow with our publishing partners.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 2rem; font-style: italic; color: #555;">
+      I helped launch Enago Lock and got university clients on board. By positioning it as both a unique feature and a way to build trust, I helped keep clients happy and grow our relationships.
+    </p>
+    </div>
+  </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>The best time to start creating was yesterday. The second best time is now.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
